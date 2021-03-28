@@ -40,7 +40,8 @@ print("hello", end=" ")  # defult end is \n, replace it with " "
 print("hello")
 #-----------------------------math
 print("--------------------------------------math module start")
-input("\n\nreceive use input")
+a = input("\n\nreceive use input")
+print(a) 
 print(25 * 68 + 13 / 28)
 # 指数exponnent, 8的2次方 print 64
 print(8 ** 2)
@@ -701,6 +702,8 @@ print("age:{}; days:{}; years:{}".format(age, age.days, age.days/365))
 import time
 
 print("---------------time module")
+print ('在'+time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())+'，我写了人生中第一行Python代码\n它的内容虽然简单，不过是平凡的一句print(1+1)\n但我知道：人类传承千万年的璀璨文明，正是从最简单的1+1开始\n我的编程之路亦如此，一切在这一刻起开始变得不同\n以下，是这行代码的运算结果：' )
+
 ticks = time.time()
 print ("当前时间戳为:", ticks)
 localtime = time.localtime(ticks)
@@ -825,4 +828,3 @@ four_decimal_points = Decimal("0.53") * Decimal("0.65")
 print(four_decimal_points)
 
 print("---------------------------------standard lib end")
-
