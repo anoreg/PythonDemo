@@ -1,9 +1,10 @@
 # ----------------Input
+# input always return a string as a result
 # print("hello:" + input("what's your name"))
 
 # ----------------String
 print("123" + "456")
-print(len("hello"[1]))
+print(len("hello"[1]))  # subscript
 
 # ----------------Integer
 print(123 + 456)
@@ -25,16 +26,18 @@ print(int(two_digit[0]) + int(two_digit[1]))
 print(type(6 / 3))
 print(3 * 2)  # asterisk
 print(3 ** 2)  # exponent
-# Priority: PEMDASLR
+
+# Priority: PEMDASLR(Parentheses, Exponent, Multiplication & Division, Addition & Subtraction, Left & Right)
 # (), **, * /, + -
-# Parentheses
-# Exponent
-# Multiplication, Division
-# Addition, Subtraction
-# Left Right
 print(3 * (3 + 3) / 3 - 3)  # Left is prior to Right
 
+# round numbers
+print(round(8 / 3, 2))  # keep 2 decimals
+print(8 // 3)  # get integer instead of the default the float value
 
+# f-string (front of string)
+value = 12
+print(f"value: {value}")
 
 
 
