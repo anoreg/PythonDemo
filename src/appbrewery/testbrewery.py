@@ -1,5 +1,7 @@
 import random
 import bmi
+import math
+
 # ----------------Input
 # input always return a string as a result
 # print("hello:" + input("what's your name"))
@@ -23,7 +25,6 @@ print(float(num_char))
 two_digit = str(num_char)
 print(int(two_digit[0]) + int(two_digit[1]))
 
-
 # --------------Math operator
 print(type(6 / 3))
 print(3 * 2)  # asterisk
@@ -33,9 +34,13 @@ print(3 ** 2)  # exponent
 # (), **, * /, + -
 print(3 * (3 + 3) / 3 - 3)  # Left is prior to Right
 
-# round numbers
-print(round(8 / 3, 2))  # keep 2 decimals
+print(8 / 3)  # get float value
 print(8 // 3)  # get integer instead of the default the float value
+# round numbers 四舍五入
+print(f"round {round(8 / 3)}")  # keep 2 decimals
+print(f"round {round(8 / 3, 2)}")  # keep 2 decimals
+# ceil numbers >=x的最大整数
+print(f"ceil {math.ceil(8 / 3)}")
 
 # f-string (front of string)
 value = 12
@@ -118,4 +123,34 @@ for num in range(0, 10, 2):
     print(f"loop range {num}", end=",")
 print("range end")
 
+i: int = 0
+while not i > 10:
+    print(f"while {i}", end=",")
+    i += 2
+print("while end")
 
+
+# ------------------------ code block, function
+def my_function():
+    print("invoke function")
+
+my_function()
+
+
+def greet_with(name: str, age: int):
+    print(f"I'm {name}, I'm {age} years old")
+
+greet_with("Fahy", 32)  # positional parameters
+greet_with(age=30, name="Haha")  # keyword parameters
+
+
+def prime_checker(input_num) -> bool:
+    """
+    Check whether the num(>=1) is a prime number
+    """
+    for index in range(2, input_num):
+        if input_num % index == 0:
+            return False
+    return True
+
+print(f"is a prime number: {prime_checker(7)}")
